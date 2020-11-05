@@ -1,11 +1,20 @@
 require 'calc'
 
+RSpec.shared_examples "basic functions" do
+  it "can add"
+  it "can subtrace"
+  it "can multiply"
+  it "can divide"
+end
+
 RSpec.describe Calc do
-  subject(:calc) { Calc.new } #ローカル変数としてそれぞれのexampleで使用できる・推奨
-  it {
-    # calc = Calc.new
-    expect(calc.add(2, 3)).to eq(5)
-  }
+  context "normal mode" do
+    include_examples "basic functions"
+  end
+  context "expert mode" do
+    include_examples "basic functions"
+    it "can draw graph"
+  end
 end
 
 # matcher 公式ドキュメント「RSpec Expectations」のモジュール「Built in matchers」

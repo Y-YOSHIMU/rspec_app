@@ -1,5 +1,11 @@
 class Calc
+
+  def initialize(logger)
+    @logger = logger
+  end
+
   def add(a, b)
-    a + b #明らかな実装
+    @logger.log
+    a + b
   end
 end
