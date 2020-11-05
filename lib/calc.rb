@@ -1,12 +1,6 @@
 class Calc
 
-  attr_accessor :tax
-
-  def initialize
-    @tax = 0
-  end
-
-  def price(x)
-    x * (1 + tax)
+  def add(a, b, name)
+    (a + b).to_s + ' by ' + name
   end
 end
