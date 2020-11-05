@@ -1,6 +1,11 @@
 class Calc
 
-  def add(a, b, name)
-    (a + b).to_s + ' by ' + name
+  def initialize(logger)
+    @logger = logger
+  end
+
+  def add(a, b)
+    @logger.log
+    a + b
   end
 end
