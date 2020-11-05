@@ -1,12 +1,11 @@
 require 'calc'
 
 RSpec.describe Calc do
-  # itは example / specify で書き換えられる
-  #itの後省略するとRSpecが文章を自動生成する
-  #do endは{}で置き換えることができる
+  subject(:calc) { Calc.new } #ローカル変数としてそれぞれのexampleで使用できる・推奨
   it {
-    calc = Calc.new
+    # calc = Calc.new
     expect(calc.add(2, 3)).to eq(5)
   }
-  it "draws graph" # pending
 end
+
+# matcher 公式ドキュメント「RSpec Expectations」のモジュール「Built in matchers」
