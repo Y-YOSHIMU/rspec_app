@@ -1,8 +1,12 @@
 class Calc
-  def add(a, b)
-    a + b #明らかな実装
+
+  attr_accessor :tax
+
+  def initialize
+    @tax = 0
   end
-  def price(x, tax)
+
+  def price(x)
     x * (1 + tax)
   end
 end
